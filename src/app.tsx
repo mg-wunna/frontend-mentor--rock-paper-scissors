@@ -1,8 +1,13 @@
+import { useState } from "react";
+import ScoreComponent from "./components/score.component";
+
 const App = () => {
+  const [score, setScore] = useState(0);
+
   return (
-    <div className="font-barlow-semi-condensed">
-      <p className="text-primary-scissors-gradient-from">Hello World</p>
-    </div>
+    <>
+      <ScoreComponent score={score} />
+    </>
   );
 };
 
