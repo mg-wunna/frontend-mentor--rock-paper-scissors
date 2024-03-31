@@ -41,6 +41,10 @@ export default {
       fontFamily: {
         "barlow-semi-condensed": ["barlow-semi-condensed"],
       },
+      boxShadow: {
+        custom: "inset 0px 6px 0px rgba(0, 0, 0, 0.25)",
+        customBottom: "inset 0px -6px 0px rgba(0, 0, 0, 0.25)",
+      },
     },
   },
   plugins: [],
