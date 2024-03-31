@@ -4,7 +4,7 @@ type ScoreComponentProps = {
 
 const ScoreComponent = ({ score }: ScoreComponentProps) => {
   return (
-    <div className="border-neutral-header-outline mx-auto flex w-[300px] items-center justify-between rounded-md border-2 border-solid p-3">
+    <div className="border-neutral-header-outline mx-auto flex w-full items-center justify-between rounded-md border-2 border-solid p-3">
       <div className="text-2xl font-bold uppercase leading-5 text-white">
         <p>Rock</p>
         <p>Paper</p>
