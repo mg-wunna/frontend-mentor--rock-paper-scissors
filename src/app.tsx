@@ -6,9 +6,9 @@ const App = () => {
   const [score] = useState(0);
 
   return (
-    <div className="flex flex-col justify-between p-5">
+    <div className="flex h-screen flex-col justify-between p-5 pb-20">
       <ScoreComponent score={score} />
-      <div>Body</div>
+      <div className="flex-1">Body</div>
       <RuleComponent />
     </div>
   );
