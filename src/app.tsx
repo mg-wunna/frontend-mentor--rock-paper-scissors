@@ -6,7 +6,7 @@ import ResultComponent from "./components/result.component";
 
 const App = () => {
   const [score] = useState(0);
-  const result = true;
+  const result = undefined;
 
   return (
     <div className="flex h-screen flex-col justify-between p-5 pb-20">
