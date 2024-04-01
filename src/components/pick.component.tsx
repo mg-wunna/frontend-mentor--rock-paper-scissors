@@ -1,7 +1,7 @@
 import bgTriangle from "../../images/bg-triangle.svg";
-import PaperIconComponent from "./paper-icon.component";
-import RockIconComponent from "./rock-icon.component";
-import ScissorsComponent from "./scissors-icon.component";
+import PaperIconComponent from "../icons/paper-icon.component";
+import RockIconComponent from "../icons/rock-icon.component";
+import ScissorsComponent from "../icons/scissors-icon.component";
 
 const PickComponent = () => {
   return (
