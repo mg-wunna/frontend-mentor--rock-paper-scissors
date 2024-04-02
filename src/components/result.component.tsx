@@ -20,7 +20,7 @@ const ResultComponent = ({
     <div className="relative flex flex-1 items-center justify-evenly gap-x-20">
       <div className="flex flex-col items-center justify-center gap-y-4">
         <div
-          className={`relative h-[140px] w-[140px] rounded-full bg-black/20 ${whoWin === "you" ? "shadow-win" : ""}`}
+          className={`relative h-[140px] w-[140px] rounded-full bg-black/20 ${housePick !== "" && whoWin !== "house" ? "shadow-win" : ""}`}
         >
           {yourPick === "paper" ? (
             <PaperIconComponent className="left-5 top-5 -translate-x-0 -translate-y-0" />
@@ -34,7 +34,7 @@ const ResultComponent = ({
       </div>
       <div className="flex flex-col items-center justify-center gap-y-4">
         <div
-          className={`relative h-[140px] w-[140px] rounded-full bg-black/20 ${whoWin === "house" ? "shadow-win" : ""}`}
+          className={`relative h-[140px] w-[140px] rounded-full bg-black/20 ${housePick !== "" && whoWin !== "you" ? "shadow-win" : ""}`}
         >
           {housePick === "paper" ? (
             <PaperIconComponent className="left-5 top-5 -translate-x-0 -translate-y-0" />
@@ -46,10 +46,12 @@ const ResultComponent = ({
         </div>
         <p className="text-xl uppercase text-white">The House Pick</p>
       </div>
-      {whoWin !== "" && (
+      {housePick !== "" && (
         <div className="absolute bottom-10 flex flex-col gap-6">
           <p className="text-6xl font-medium uppercase text-white">
-            You {whoWin === "you" ? "Win" : "Lose"}
+            {whoWin === ""
+              ? "Draw"
+              : `You ${whoWin === "you" ? "Win" : "Lose"}`}
           </p>
           <button
             className="w-full rounded-md bg-white py-2 text-lg uppercase"

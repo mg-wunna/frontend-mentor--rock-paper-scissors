@@ -25,7 +25,7 @@ const App = () => {
         const housePick: Icons = "paper" as Icons;
         setHousePick(housePick);
 
-        let whoWin: WhoWin = "you";
+        let whoWin: WhoWin = "";
         if (yourPick === "paper" && housePick === "rock") whoWin = "you";
         else if (yourPick === "paper" && housePick === "scissors")
           whoWin = "house";
