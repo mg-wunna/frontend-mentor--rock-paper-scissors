@@ -3,11 +3,19 @@ import PaperIconComponent from "../icons/paper-icon.component";
 import RockIconComponent from "../icons/rock-icon.component";
 import ScissorsComponent from "../icons/scissors-icon.component";
 
-const ResultComponent = () => {
-  const yourPick: Icons = "scissors" as Icons;
-  const housePick: Icons = "paper" as Icons;
-  const whoWin: WhoWin = "house" as WhoWin;
+export type ResultComponentProps = {
+  yourPick: Icons;
+  housePick: Icons;
+  whoWin: WhoWin;
+  onPlayAgain: () => void;
+};
 
+const ResultComponent = ({
+  yourPick,
+  housePick,
+  whoWin,
+  onPlayAgain,
+}: ResultComponentProps) => {
   return (
     <div className="relative flex flex-1 items-center justify-evenly gap-x-20">
       <div className="flex flex-col items-center justify-center gap-y-4">
@@ -43,7 +51,10 @@ const ResultComponent = () => {
           <p className="text-6xl font-medium uppercase text-white">
             You {whoWin === "you" ? "Win" : "Lose"}
           </p>
-          <button className="w-full rounded-md bg-white py-2 text-lg uppercase">
+          <button
+            className="w-full rounded-md bg-white py-2 text-lg uppercase"
+            onClick={onPlayAgain}
+          >
             Play Again
           </button>
         </div>
