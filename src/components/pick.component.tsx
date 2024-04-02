@@ -7,9 +7,9 @@ const PickComponent = () => {
   return (
     <div className="flex flex-1 items-center justify-center">
       <div className="relative">
-        <PaperIconComponent className="left-0 top-0 -translate-x-4 -translate-y-8" />
-        <ScissorsComponent className="right-0 top-0 -translate-y-8 translate-x-4" />
-        <RockIconComponent className="bottom-0 left-1/2 -translate-x-1/2 -translate-y-4" />
+        <PaperIconComponent className="left-0 top-0 -translate-x-4 -translate-y-8 cursor-pointer" />
+        <ScissorsComponent className="right-0 top-0 -translate-y-8 translate-x-4 cursor-pointer" />
+        <RockIconComponent className="bottom-0 left-1/2 -translate-x-1/2 -translate-y-4 cursor-pointer" />
         <img src={bgTriangle} />
       </div>
     </div>
