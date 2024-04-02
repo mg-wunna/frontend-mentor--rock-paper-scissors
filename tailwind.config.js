@@ -44,6 +44,7 @@ export default {
       boxShadow: {
         custom: "inset 0px 6px 0px rgba(0, 0, 0, 0.25)",
         customBottom: "inset 0px -6px 0px rgba(0, 0, 0, 0.25)",
+        win: "0px 0px 2px 20px rgba(255, 255, 255, 0.10), 0px 0px 2px 45px rgba(255, 255, 255, 0.06), 0px 0px 2px 80px rgba(255, 255, 255, 0.02)",
       },
     },
   },
